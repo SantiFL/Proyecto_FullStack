@@ -1,0 +1,17 @@
+<h3>agregar comentario</h3>
+<form [formGroup] = "agregarComentario"(ngSubmit) ="agregar()">
+    <div class="mb-3">
+        <label for="titulo" class="form-label">titulo</label>
+        <input formControlName ="titulo" type="text" class="form-control" id="titulo">
+      </div>
+      <div class="mb-3">
+        <label for="creador" class="form-label">creador</label>
+        <input formControlName ="creador" type="text" class="form-control" id="creador">
+      </div>
+      <div class="mb-3">
+        <label for="texto" class="form-label">texto</label>
+        <textarea  formControlName ="texto"class="form-control" id="texto" rows="8"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary float-end">aceptar</button>
+      <button type="button" routerLink='/'class="btn btn-dark">volver</button>
+</form>

@@ -1,0 +1,33 @@
+<div class="row mt-3">
+    <div class="col-lg-6">
+        <h4>Listado de comentarios</h4>
+    </div>
+    <div class="col-lg-6">
+        <button class="btn btn-primary float-end">agregar comentario</button>
+    </div>
+</div>
+
+<table class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <td>TITULO</td>
+            <td>CREADOR</td>
+            <td>FECHA</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let comentario of ListComentario">
+            <td>{{comentario.titulo}}</td>
+            <td>{{comentario.creador}}</td>
+            <td>{{comentario.fechacreacion | date : 'dd/mm/yyyy'}}</td>
+            <td>
+               <button class="btn btn-primary btn-sm float-end">editar</button>
+            </td>
+            <td>
+                <button class="btn btn-danger btn-sm float-end">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
